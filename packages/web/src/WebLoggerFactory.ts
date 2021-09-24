@@ -1,5 +1,6 @@
 import { ILogger, ILoggerFactory } from "@js-soft/logging-abstractions";
 import Logger from "js-logger";
+import { WebLogger } from "./WebLogger";
 
 export class WebLoggerFactory implements ILoggerFactory {
     public init(): void {
@@ -50,6 +51,8 @@ export class WebLoggerFactory implements ILoggerFactory {
             sName = "";
         }
 
-        return Logger.get(sName) as unknown as ILogger;
+        const logger = Logger.get(sName);
+
+        return new WebLogger(logger);
     }
 }
