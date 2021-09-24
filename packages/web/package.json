@@ -1,0 +1,32 @@
+{
+    "name": "@js-soft/web-logger",
+    "version": "1.0.0",
+    "description": "Web implementation of the '@js-soft/logging-abstractions' library",
+    "homepage": "https://github.com/js-soft/ts-logging#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/js-soft/ts-logging.git",
+        "directory": "packages/web"
+    },
+    "license": "MIT",
+    "author": "j&s-soft GmbH",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "license-check": "license-check"
+    },
+    "dependencies": {
+        "@js-soft/license-check": "1.0.1",
+        "@js-soft/logging-abstractions": "1.0.0",
+        "js-logger": "1.6.1",
+        "json-stringify-safe": "^5.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "16.3.1",
+        "typescript": "4.3.5",
+        "@types/json-stringify-safe": "^5.0.0"
+    }
+}

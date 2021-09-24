@@ -1,0 +1,14 @@
+{
+    "packages": ["packages/*"],
+    "version": "independent",
+
+    "command": {
+        "version": {
+            "gitTagVersion": false,
+            "exact": true
+        },
+        "run": {
+            "stream": true
+        }
+    }
+}
