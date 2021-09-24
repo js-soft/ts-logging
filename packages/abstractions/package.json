@@ -19,6 +19,7 @@
         "license-check": "license-check"
     },
     "devDependencies": {
+        "@js-soft/license-check": "1.0.1",
         "typescript": "^4.3.5"
     }
 }
