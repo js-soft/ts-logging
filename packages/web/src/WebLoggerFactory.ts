@@ -41,18 +41,10 @@ export class WebLoggerFactory implements ILoggerFactory {
         });
     }
 
-    public getLogger(oName: string | Function): ILogger {
-        let sName = oName instanceof Function ? oName.name : oName;
-        if (oName instanceof Function) {
-            sName = oName.name;
-        } else if (typeof oName === "string") {
-            sName = oName;
-        } else {
-            sName = "";
-        }
+    public getLogger(nameOrConstructor: string | Function): ILogger {
+        const name = nameOrConstructor instanceof Function ? nameOrConstructor.name : nameOrConstructor;
 
-        const logger = Logger.get(sName);
-
+        const logger = Logger.get(name);
         return new WebLogger(logger);
     }
 }
