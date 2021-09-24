@@ -1,0 +1,45 @@
+{
+    "name": "@js-soft/node-logger",
+    "version": "1.0.0",
+    "description": "NodeJs implementation of the '@js-soft/logging-abstractions' library",
+    "homepage": "https://github.com/js-soft/ts-logging#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/js-soft/ts-logging.git",
+        "directory": "packages/node"
+    },
+    "license": "MIT",
+    "author": "j&s-soft GmbH",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "license-check": "license-check",
+        "test": "jest -i",
+        "test:ci": "npm run test"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node",
+        "testTimeout": 60000
+    },
+    "dependencies": {
+        "@js-soft/logging-abstractions": "1.0.0",
+        "json-stringify-safe": "^5.0.1",
+        "log4js": "^6.3.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.1",
+        "@types/json-stringify-safe": "^5.0.0",
+        "@types/node": "^16.3.1",
+        "jest": "^27.2.0",
+        "ts-jest": "^27.0.5",
+        "typescript": "^4.3.5",
+        "@js-soft/license-check": "1.0.2"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
