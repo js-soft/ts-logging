@@ -1,6 +1,6 @@
 import { ILogger } from "@js-soft/logging-abstractions";
 import stringify from "json-stringify-safe";
-import { Logger } from "typescript-logging";
+import { Logger } from "typescript-logging-log4ts-style";
 
 export class SimpleLogger implements ILogger {
     public constructor(private readonly logger: Logger) {}
@@ -38,6 +38,6 @@ export class SimpleLogger implements ILogger {
                 return stringify(arg);
             })
             .join("\n");
-        return { msg: message };
+        return message;
     }
 }
