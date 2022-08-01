@@ -1,4 +1,4 @@
 set -e
 set -x
 
-npx lerna run test:ci
+npm run test:ci --workspaces
