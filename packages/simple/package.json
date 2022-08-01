@@ -1,6 +1,6 @@
 {
     "name": "@js-soft/simple-logger",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Simple implementation of the '@js-soft/logging-abstractions' library",
     "homepage": "https://github.com/js-soft/ts-logging#readme",
     "repository": {
