@@ -28,7 +28,7 @@
     "dependencies": {
         "@js-soft/logging-abstractions": "1.0.0",
         "json-stringify-safe": "^5.0.1",
-        "log4js": "^6.6.1"
+        "log4js": "^6.7.1"
     },
     "devDependencies": {
         "@types/json-stringify-safe": "^5.0.0"
