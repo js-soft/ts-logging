@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
+import stringify from "json-stringify-safe";
 import log4js, { LoggingEvent } from "log4js";
 import util from "util";
 
@@ -10,7 +11,7 @@ function jsonFormat(logEvent: LoggingEvent) {
         "@l": logEvent.level.levelStr
     };
 
-    return JSON.stringify(json);
+    return stringify(json);
 }
 
 export function registerLog4jsJsonLayout(): void {
