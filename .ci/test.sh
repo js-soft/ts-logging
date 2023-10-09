@@ -1,4 +1,4 @@
 set -e
 set -x
 
-npm run test:ci --workspaces
+npm run test:ci --workspaces --if-present
