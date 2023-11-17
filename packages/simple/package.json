@@ -1,6 +1,6 @@
 {
     "name": "@js-soft/simple-logger",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Simple implementation of the '@js-soft/logging-abstractions' library",
     "homepage": "https://github.com/js-soft/ts-logging#readme",
     "repository": {
@@ -19,7 +19,7 @@
         "license-check": "license-check"
     },
     "dependencies": {
-        "@js-soft/logging-abstractions": "1.0.0",
+        "@js-soft/logging-abstractions": "1.0.1",
         "json-stringify-safe": "^5.0.1",
         "typescript-logging": "^2.1.0",
         "typescript-logging-log4ts-style": "^2.1.0"
