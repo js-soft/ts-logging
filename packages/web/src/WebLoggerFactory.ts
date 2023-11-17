@@ -1,14 +1,14 @@
 import { ILogger, ILoggerFactory } from "@js-soft/logging-abstractions";
-import Logger from "js-logger";
+import jsLogger from "js-logger";
 import { WebLogger } from "./WebLogger";
 
 export class WebLoggerFactory implements ILoggerFactory {
     public init(): void {
-        Logger.useDefaults({
-            defaultLevel: Logger.TRACE
+        jsLogger.useDefaults({
+            defaultLevel: jsLogger.TRACE
         });
 
-        const consoleHandler = Logger.createDefaultHandler({
+        const consoleHandler = jsLogger.createDefaultHandler({
             formatter: function (messages, context) {
                 messages.unshift(`${new Date().toISOString()} [${context.name === "" ? "default" : context.name}]`);
             }
@@ -28,14 +28,14 @@ export class WebLoggerFactory implements ILoggerFactory {
     private _initWeb(consoleHandler: Function) {
         const appendLocalStorage = (loggerName: string, message: string) => {
             const oldEntry = localStorage.getItem("logs");
-            localStorage.setItem("logs", `${oldEntry === null ? "" : oldEntry}${message}\n`);
+            localStorage.setItem("logs", `${oldEntry ?? ""}${message}\n`);
 
             const loggerStorageName = `logs-${loggerName}`;
             const oldLoggerEntry = localStorage.getItem(loggerStorageName);
-            localStorage.setItem(loggerStorageName, `${oldLoggerEntry === null ? "" : oldLoggerEntry}${message}\n`);
+            localStorage.setItem(loggerStorageName, `${oldLoggerEntry ?? ""}${message}\n`);
         };
 
-        Logger.setHandler((messages: any[], context: any) => {
+        jsLogger.setHandler((messages: any[], context: any) => {
             appendLocalStorage(context.name, this.formatMessages(messages, context));
             consoleHandler(messages, context);
         });
@@ -44,7 +44,7 @@ export class WebLoggerFactory implements ILoggerFactory {
     public getLogger(nameOrConstructor: string | Function): ILogger {
         const name = nameOrConstructor instanceof Function ? nameOrConstructor.name : nameOrConstructor;
 
-        const logger = Logger.get(name);
+        const logger = jsLogger.get(name);
         return new WebLogger(logger);
     }
 }

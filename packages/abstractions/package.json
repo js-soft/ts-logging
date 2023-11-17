@@ -1,6 +1,6 @@
 {
     "name": "@js-soft/logging-abstractions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Web implementation of the '@js-soft/logging-abstractions' library",
     "homepage": "https://github.com/js-soft/ts-logging#readme",
     "repository": {
@@ -18,8 +18,8 @@
         "build": "tsc",
         "license-check": "license-check"
     },
-    "devDependencies": {},
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "provenance": true
     }
 }

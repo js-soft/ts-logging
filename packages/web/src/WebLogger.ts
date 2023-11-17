@@ -1,9 +1,9 @@
 import { ILogger } from "@js-soft/logging-abstractions";
-import * as JsLogger from "js-logger";
+import * as jsLogger from "js-logger";
 import stringify from "json-stringify-safe";
 
 export class WebLogger implements ILogger {
-    public constructor(private readonly logger: JsLogger.ILogger) {}
+    public constructor(private readonly logger: jsLogger.ILogger) {}
 
     public trace(...args: any[]): void {
         this.logger.trace(this.formatMessage(args));
