@@ -6,7 +6,7 @@ import log4js, { LoggingEvent } from "log4js";
 import util from "util";
 
 function jsonFormat(logEvent: LoggingEvent) {
-    // The correlation id is undefined when no set in the current call stack
+    // The correlation id is undefined when not set in the current call stack
     const correlation = correlationId.getId();
     const json = {
         "@t": logEvent.startTime,
