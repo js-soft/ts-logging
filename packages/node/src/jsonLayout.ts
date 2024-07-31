@@ -12,7 +12,6 @@ function jsonFormat(logEvent: LoggingEvent) {
         "@l": logEvent.level.levelStr
     };
 
-    // The correlation id is undefined when not set in the current call stack
     const correlationId = correlationIdLib.getId();
     if (correlationId) json["correlationId"] = correlationId;
 
