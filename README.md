@@ -4,10 +4,10 @@
 
 This monorepo consolidates the following packages dealing with logging:
 
--   [Logging Abstractions](packages/abstractions/)
--   [Simple Logger](packages/simple/)
--   [Node Logger](packages/node/)
--   [Web Logger](packages/web/)
+- [Logging Abstractions](packages/abstractions/)
+- [Simple Logger](packages/simple/)
+- [Node Logger](packages/node/)
+- [Web Logger](packages/web/)
 
 | Package                                        | Version                                                                                                                                 |
 | :--------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
