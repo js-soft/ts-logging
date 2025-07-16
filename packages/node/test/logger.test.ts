@@ -8,7 +8,7 @@ describe("Node Logger Tests", function () {
         categories: { default: { appenders: ["file"], level: "trace" } }
     });
 
-    it("should log into the file", () => {
+    test("should log into the file", () => {
         const logger = factory.getLogger("test");
         logger.debug("test");
         logger.error("test");
