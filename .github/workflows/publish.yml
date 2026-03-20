@@ -19,4 +19,6 @@ jobs:
           registry-url: https://registry.npmjs.org
       - run: bash .ci/build.sh
       - run: bash .ci/test.sh
-      - run: bash .ci/publish.sh
+      - run: bash .ci/publishNpm.sh
+        env:
+          VERSION: ${{ github.ref_name }}
