@@ -12,7 +12,7 @@ if printf -- "$VERSION" | grep -q " "; then
 fi
 
 # set the version of all packages in the workspace to $VERSION
-npm version --workspaces $VERSION
+npm version --workspaces --no-git-tag-version "$VERSION"
 
 # replace all dependencies from the current workspace that are marked with "*" with the version that gets published
 find . -regex "./packages/[A-Za-z-]*/package\.json$" -exec sed -i -e "s/\"\*\"/\"$VERSION\"/g" {} \;
