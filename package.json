@@ -20,6 +20,7 @@
         "@js-soft/license-check": "1.0.10",
         "@types/jest": "^30.0.0",
         "@types/node": "^24.7.2",
+        "enhanced-publish": "^1.1.7",
         "eslint": "^9.37.0",
         "jest": "^30.3.0",
         "prettier": "^3.8.1",
