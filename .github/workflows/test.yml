@@ -6,6 +6,12 @@ on:
       - main
 
 jobs:
+  run-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: bash .ci/runChecks.sh
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -13,5 +19,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: current
+      - run: npm ci
+      - run: npm run build
       - run: bash .ci/build.sh
-      - run: bash .ci/test.sh
+      - run: npm run test:ci --workspaces --if-present

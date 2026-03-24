@@ -15,6 +15,7 @@
     ],
     "scripts": {
         "build": "tsc",
+        "cdep": "tsc && madge --circular dist",
         "license-check": "license-check"
     },
     "publishConfig": {
