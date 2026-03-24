@@ -21,5 +21,4 @@ jobs:
           node-version: current
       - run: npm ci
       - run: npm run build
-      - run: bash .ci/build.sh
       - run: npm run test:ci --workspaces --if-present
