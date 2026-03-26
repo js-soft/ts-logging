@@ -2,8 +2,8 @@ name: Publish
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*"
 
 jobs:
   publish-npm:
@@ -12,11 +12,13 @@ jobs:
       contents: read
       id-token: write
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           node-version: current
           registry-url: https://registry.npmjs.org
-      - run: bash .ci/build.sh
-      - run: bash .ci/test.sh
-      - run: bash .ci/publish.sh
+      - run: npm ci
+      - run: npm run build
+      - run: bash .ci/publishNpm.sh
+        env:
+          VERSION: ${{ github.ref_name }}
