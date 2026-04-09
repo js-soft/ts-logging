@@ -16,16 +16,16 @@
         "test": "npm run test --workspaces --if-present"
     },
     "devDependencies": {
-        "@js-soft/eslint-config-ts": "2.0.4",
+        "@js-soft/eslint-config-ts": "2.0.5",
         "@js-soft/license-check": "1.0.10",
         "@types/jest": "^30.0.0",
-        "@types/node": "^24.7.2",
+        "@types/node": "^25.5.2",
         "enhanced-publish": "^1.1.7",
         "eslint": "^9.37.0",
         "jest": "^30.3.0",
         "madge": "^8.0.0",
         "prettier": "^3.8.1",
-        "ts-jest": "^29.4.6",
+        "ts-jest": "^29.4.9",
         "typescript": "^5.9.3"
     }
 }
