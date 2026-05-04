@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es2019",
-        "module": "commonjs",
+        "module": "nodenext",
         "sourceMap": true,
         "declaration": true,
         "strict": true,
@@ -10,11 +10,9 @@
         "esModuleInterop": true,
         "experimentalDecorators": true,
         "resolveJsonModule": true,
-        "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "noImplicitReturns": true,
         "strictNullChecks": true,
-        "strictPropertyInitialization": false,
-        "downlevelIteration": true
+        "strictPropertyInitialization": false
     }
 }

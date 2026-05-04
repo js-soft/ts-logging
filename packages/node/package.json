@@ -23,7 +23,15 @@
     "jest": {
         "preset": "ts-jest",
         "testEnvironment": "node",
-        "testTimeout": 60000
+        "testTimeout": 60000,
+        "transform": {
+            "^.+\\.tsx?$": [
+                "ts-jest",
+                {
+                    "tsconfig": "test/tsconfig.json"
+                }
+            ]
+        }
     },
     "dependencies": {
         "@js-soft/logging-abstractions": "1.0.2",
