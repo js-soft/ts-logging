@@ -2,8 +2,8 @@
     "extends": "../../../tsconfig.base.json",
     "compilerOptions": {
         "lib": ["esnext", "dom"],
-        "baseUrl": "../",
-        "types": ["jest", "node"]
+        "types": ["jest", "node"],
+        "isolatedModules": true
     },
     "include": ["**/*.ts"]
 }
