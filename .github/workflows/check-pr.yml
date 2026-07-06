@@ -1,8 +1,5 @@
 name: Check Pull Request
 
-permissions:
-  contents: read
-
 on:
   pull_request:
     types: [opened, labeled, unlabeled, synchronize]
@@ -12,9 +9,8 @@ jobs:
     name: Validate the Pull Request's labels
     runs-on: ubuntu-latest
     steps:
-      - name: PR must be labeled
-        uses: jesusvasquez333/verify-pr-label-action@657d111bbbe13e22bbd55870f1813c699bde1401 # v1.4.0
-        with:
-          disable-reviews: true
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-          valid-labels: "breaking-change, bug, chore, ci, dependencies, documentation, enhancement, refactoring, test"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate labels
+        run: ./.github/scripts/check-pr.sh
