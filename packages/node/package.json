@@ -15,7 +15,7 @@
     ],
     "scripts": {
         "build": "tsc",
-        "cdep": "tsc && madge --circular dist",
+        "cdep": "tsc && depcruise --config ../../.dependency-cruiser.cjs dist",
         "license-check": "license-check",
         "test": "jest -i",
         "test:ci": "npm run test"
