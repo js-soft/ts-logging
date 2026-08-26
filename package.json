@@ -22,7 +22,7 @@
         "@types/node": "25.9.5",
         "dependency-cruiser": "18.2.0",
         "enhanced-publish": "1.1.12",
-        "eslint": "10.8.1",
+        "eslint": "10.9.0",
         "jest": "30.4.2",
         "prettier": "3.9.6",
         "ts-jest": "29.4.12",
