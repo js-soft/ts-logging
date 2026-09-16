@@ -17,9 +17,9 @@
     },
     "devDependencies": {
         "@js-soft/eslint-config-ts": "2.0.10",
-        "@js-soft/license-check": "1.0.14",
+        "@js-soft/license-check": "1.0.15",
         "@types/jest": "30.0.0",
-        "@types/node": "25.9.5",
+        "@types/node": "25.9.6",
         "dependency-cruiser": "18.2.0",
         "enhanced-publish": "1.1.12",
         "eslint": "10.10.0",
