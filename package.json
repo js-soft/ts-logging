@@ -21,11 +21,11 @@
         "@types/jest": "30.0.0",
         "@types/node": "25.9.9",
         "dependency-cruiser": "18.5.0",
-        "enhanced-publish": "1.1.16",
+        "enhanced-publish": "1.1.17",
         "eslint": "10.12.0",
         "jest": "30.5.2",
         "prettier": "3.9.10",
-        "ts-jest": "29.4.14",
+        "ts-jest": "29.4.15",
         "typescript": "6.0.3"
     }
 }
