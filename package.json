@@ -16,12 +16,12 @@
         "test": "npm run test --workspaces --if-present"
     },
     "devDependencies": {
-        "@js-soft/eslint-config-ts": "2.0.14",
-        "@js-soft/license-check": "1.0.16",
+        "@js-soft/eslint-config-ts": "2.0.15",
+        "@js-soft/license-check": "1.0.17",
         "@types/jest": "30.0.0",
         "@types/node": "25.9.9",
-        "dependency-cruiser": "18.7.0",
-        "enhanced-publish": "1.1.19",
+        "dependency-cruiser": "18.7.2",
+        "enhanced-publish": "1.1.20",
         "eslint": "10.14.0",
         "jest": "30.5.2",
         "prettier": "3.9.10",
